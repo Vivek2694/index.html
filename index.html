@@ -1,12 +1,340 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VDigital Website</title>
+    <title>V Digital | Digital Marketing & Ad Services</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <!-- Calendly Widget CSS -->
+    <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+    <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+    
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap');
+        
+        body { font-family: 'Outfit', sans-serif; }
+        
+        .hero-pattern {
+            background-color: #111827;
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%231f2937' fill-opacity='0.4'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+    </style>
 </head>
-<body>
-    <h1>Welcome to VDigital</h1>
-    <p>Your digital solutions partner</p>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md fixed w-full z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20">
+                <div class="flex items-center">
+                    <a href="#" class="flex-shrink-0 flex items-center">
+                        <span class="text-3xl font-bold text-blue-900 tracking-tighter">V Digital<span class="text-blue-500">.</span></span>
+                    </a>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#services" class="text-gray-600 hover:text-blue-600 font-medium transition">Services</a>
+                    <a href="#courses" class="text-gray-600 hover:text-blue-600 font-medium transition">Courses</a>
+                    <a href="#contact" class="text-gray-600 hover:text-blue-600 font-medium transition">Contact</a>
+                    <button onclick="openPrivacyPolicy()" class="text-gray-400 hover:text-gray-600 text-sm">Privacy</button>
+                    <button onclick="openCalendly()" class="bg-blue-600 text-white px-5 py-2 rounded-full font-semibold hover:bg-blue-700 transition shadow-lg">
+                        Book Consultation
+                    </button>
+                </div>
+                <!-- Mobile menu button -->
+                <div class="flex items-center md:hidden">
+                    <button onclick="toggleMobileMenu()" class="text-gray-600 hover:text-blue-600 focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
+            <a href="#services" class="block px-4 py-3 text-gray-700 hover:bg-gray-50">Services</a>
+            <a href="#courses" class="block px-4 py-3 text-gray-700 hover:bg-gray-50">Courses</a>
+            <a href="#contact" class="block px-4 py-3 text-gray-700 hover:bg-gray-50">Contact</a>
+            <button onclick="openCalendly()" class="block w-full text-left px-4 py-3 text-blue-600 font-bold bg-gray-50">Book Consultation</button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero-pattern pt-32 pb-24 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-10 md:mb-0">
+                <h1 class="text-4xl md:text-6xl font-bold leading-tight mb-6">
+                    Master Digital Marketing & <br><span class="text-blue-500">Scale Your Ads</span>
+                </h1>
+                <p class="text-xl text-gray-400 mb-8 max-w-lg">
+                    Professional Google Ads setup, campaign management, and exclusive mentorship courses. 
+                </p>
+                <div class="flex gap-4">
+                    <a href="#services" class="bg-blue-600 px-8 py-4 rounded-lg font-bold hover:bg-blue-700 transition shadow-lg hover:shadow-blue-500/30">
+                        Get Started
+                    </a>
+                    <a href="#courses" class="border border-gray-600 px-8 py-4 rounded-lg font-bold hover:bg-gray-800 transition">
+                        View Courses
+                    </a>
+                </div>
+            </div>
+            <div class="md:w-1/2 flex justify-center relative">
+                <div class="absolute inset-0 bg-blue-500 blur-3xl opacity-20 rounded-full"></div>
+                <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Dashboard" class="relative rounded-2xl shadow-2xl border border-gray-700 z-10 transform rotate-2 hover:rotate-0 transition duration-500">
+            </div>
+        </div>
+    </header>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">Our Premium Services</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Expert handling of your Google Ads infrastructure.</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                <!-- Service 1 -->
+                <div class="border border-gray-200 rounded-2xl p-8 hover:shadow-xl transition duration-300 relative overflow-hidden group">
+                    <div class="absolute top-0 right-0 bg-gray-100 px-4 py-1 rounded-bl-lg text-xs font-bold text-gray-500">SETUP</div>
+                    <div class="w-14 h-14 bg-blue-100 rounded-full flex items-center justify-center text-blue-600 text-2xl mb-6">
+                        <i class="fab fa-google"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-2">Google Ads Account Setup</h3>
+                    <p class="text-gray-500 mb-6 h-20">Complete configuration of your ad account, billing setup, conversion tracking, and analytics integration.</p>
+                    <div class="text-4xl font-bold text-gray-900 mb-6">$500</div>
+                    <button onclick="openCalendly()" class="w-full bg-gray-900 text-white py-3 rounded-lg font-semibold hover:bg-gray-800 transition">Book Setup</button>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="border-2 border-blue-600 rounded-2xl p-8 hover:shadow-2xl transition duration-300 relative overflow-hidden bg-white transform md:-translate-y-4">
+                    <div class="absolute top-0 right-0 bg-blue-600 px-4 py-1 rounded-bl-lg text-xs font-bold text-white">RECOMMENDED</div>
+                    <div class="w-14 h-14 bg-blue-600 rounded-full flex items-center justify-center text-white text-2xl mb-6">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-2">Campaign Launch & Setup</h3>
+                    <p class="text-gray-500 mb-6 h-20">Full account setup PLUS creation and launch of your first high-ROI campaign tailored to your business.</p>
+                    <div class="text-4xl font-bold text-gray-900 mb-6">$1,500</div>
+                    <button onclick="openCalendly()" class="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold hover:bg-blue-700 transition">Book Launch</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Course Section -->
+    <section id="courses" class="py-20 bg-gray-900 text-white relative overflow-hidden">
+        <!-- Decoration -->
+        <div class="absolute top-0 left-0 w-64 h-64 bg-blue-500 rounded-full blur-3xl opacity-10 -translate-x-1/2 -translate-y-1/2"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="flex flex-col md:flex-row gap-12 items-center">
+                <div class="md:w-1/2">
+                    <span class="text-blue-400 font-bold tracking-wider uppercase text-sm">V Digital Academy</span>
+                    <h2 class="text-4xl font-bold mt-2 mb-6">Digital Marketing Mastery</h2>
+                    <p class="text-gray-300 mb-8 text-lg">
+                        Learn the exact strategies used to scale businesses. This isn't just theory; it's a blueprint for execution.
+                    </p>
+                    
+                    <div class="bg-gray-800 p-6 rounded-xl border border-gray-700 mb-8 inline-block">
+                        <div class="flex items-center gap-3 mb-2">
+                            <i class="fas fa-users text-blue-400"></i>
+                            <span class="font-bold">Exclusive Cohort</span>
+                        </div>
+                        <div class="flex items-end gap-2">
+                            <span id="spots-left" class="text-4xl font-bold text-white">5</span>
+                            <span class="text-gray-400 mb-1">spots remaining this month</span>
+                        </div>
+                        <div class="w-full bg-gray-700 h-2 rounded-full mt-3 overflow-hidden">
+                            <div id="progress-bar" class="bg-blue-500 h-full w-0 transition-all duration-1000"></div>
+                        </div>
+                    </div>
+
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-center gap-3"><i class="fas fa-check-circle text-green-400"></i> Live Mentorship</li>
+                        <li class="flex items-center gap-3"><i class="fas fa-check-circle text-green-400"></i> Real-world Case Studies</li>
+                        <li class="flex items-center gap-3"><i class="fas fa-check-circle text-green-400"></i> Lifetime Community Access</li>
+                    </ul>
+                </div>
+
+                <div class="md:w-1/2 w-full bg-white text-gray-900 rounded-2xl p-8 shadow-2xl">
+                    <h3 class="text-2xl font-bold mb-6">Enroll Now</h3>
+                    <form id="enrollmentForm" onsubmit="handleEnrollment(event)">
+                        <div class="space-y-4">
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-1">Full Name</label>
+                                <input type="text" required class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:outline-none transition">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-1">Email Address</label>
+                                <input type="email" required class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:outline-none transition">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-1">Phone Number</label>
+                                <input type="tel" required class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:outline-none transition">
+                            </div>
+                            <button type="submit" id="enrollBtn" class="w-full bg-blue-600 text-white font-bold py-4 rounded-lg hover:bg-blue-700 transition transform active:scale-95">
+                                Secure My Spot
+                            </button>
+                            <p class="text-xs text-center text-gray-500 mt-2">Submission sends request to vivekkoleti@gmail.com</p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-gray-50">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-900">Get in Touch</h2>
+                <p class="text-gray-600 mt-2">Have questions? Send us a message directly.</p>
+            </div>
+            
+            <form action="mailto:vivekkoleti@gmail.com" method="post" enctype="text/plain" class="bg-white p-8 rounded-2xl shadow-lg border border-gray-100">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-1">Name</label>
+                        <input type="text" name="name" required class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:outline-none">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-1">Email</label>
+                        <input type="email" name="mail" required class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:outline-none">
+                    </div>
+                </div>
+                <div class="mb-6">
+                    <label class="block text-sm font-medium text-gray-700 mb-1">Message</label>
+                    <textarea name="message" rows="4" required class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:outline-none"></textarea>
+                </div>
+                <button type="submit" class="w-full bg-gray-900 text-white font-bold py-3 rounded-lg hover:bg-gray-800 transition">
+                    Send Message
+                </button>
+            </form>
+            
+            <div class="mt-8 text-center text-gray-500">
+                <p>Email: <a href="mailto:vivekkoleti@gmail.com" class="text-blue-600 hover:underline">vivekkoleti@gmail.com</a></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-400 py-10 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center">
+            <div class="mb-4 md:mb-0">
+                <span class="text-xl font-bold text-white tracking-tighter">V Digital.</span>
+                <p class="text-sm mt-1">Empowering businesses through digital excellence.</p>
+            </div>
+            <div class="flex gap-6 text-sm">
+                <a href="#services" class="hover:text-white transition">Services</a>
+                <a href="#courses" class="hover:text-white transition">Courses</a>
+                <button onclick="openPrivacyPolicy()" class="hover:text-white transition">Privacy Policy</button>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Privacy Policy Modal -->
+    <div id="privacyModal" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden flex items-center justify-center p-4">
+        <div class="bg-white rounded-xl max-w-2xl w-full max-h-[80vh] overflow-y-auto p-8 relative">
+            <button onclick="closePrivacyPolicy()" class="absolute top-4 right-4 text-gray-500 hover:text-gray-800">
+                <i class="fas fa-times text-xl"></i>
+            </button>
+            <h2 class="text-2xl font-bold text-gray-900 mb-4">Privacy Policy</h2>
+            <div class="prose text-gray-600">
+                <p class="mb-4"><strong>Effective Date:</strong> Oct 2023</p>
+                <p class="mb-4">At V Digital, accessible from vdigital.com, one of our main priorities is the privacy of our visitors. This Privacy Policy document contains types of information that is collected and recorded by V Digital and how we use it.</p>
+                <h3 class="font-bold text-gray-800 mt-4 mb-2">Information We Collect</h3>
+                <p class="mb-4">We collect information you provide directly to us when you fill out a form, book a consultation, or enroll in a course. This includes name, email address, and phone number.</p>
+                <h3 class="font-bold text-gray-800 mt-4 mb-2">How We Use Information</h3>
+                <p class="mb-4">We use the information we collect to communicate with you, process your requests, and improve our services. Form submissions are sent directly to our admin email (vivekkoleti@gmail.com).</p>
+                <h3 class="font-bold text-gray-800 mt-4 mb-2">Appointments</h3>
+                <p class="mb-4">We use Calendly for scheduling. When you book an appointment, your information is processed by Calendly in accordance with their privacy policy.</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // --- CONFIGURATION ---
+        // REPLACE with your actual Calendly URL
+        // Ensure your Calendly event is set to availability: Weekends 9am-3pm EST
+        const CALENDLY_LINK = 'https://calendly.com/vivekkoleti'; 
+
+        // --- CALENDLY LOGIC ---
+        function openCalendly() {
+            Calendly.initPopupWidget({ url: CALENDLY_LINK });
+            return false;
+        }
+
+        // --- COURSE SPOTS LOGIC ---
+        // Simulating persistence using LocalStorage
+        const maxSpots = 5;
+        let spotsTaken = parseInt(localStorage.getItem('vdigital_spots_taken')) || 0;
+        
+        function updateSpotsUI() {
+            const spotsLeft = Math.max(0, maxSpots - spotsTaken);
+            document.getElementById('spots-left').innerText = spotsLeft;
+            
+            // Update Progress Bar
+            const percentage = (spotsTaken / maxSpots) * 100;
+            document.getElementById('progress-bar').style.width = percentage + '%';
+
+            // Disable if full
+            if(spotsLeft === 0) {
+                const btn = document.getElementById('enrollBtn');
+                btn.innerText = "Enrollment Closed for This Month";
+                btn.classList.add('bg-gray-500', 'cursor-not-allowed');
+                btn.classList.remove('bg-blue-600', 'hover:bg-blue-700');
+                btn.disabled = true;
+            }
+        }
+
+        function handleEnrollment(e) {
+            e.preventDefault();
+            if(spotsTaken < maxSpots) {
+                // Increment spots
+                spotsTaken++;
+                localStorage.setItem('vdigital_spots_taken', spotsTaken);
+                updateSpotsUI();
+
+                // Construct Mailto for enrollment
+                const name = e.target.querySelector('input[type="text"]').value;
+                const email = e.target.querySelector('input[type="email"]').value;
+                const phone = e.target.querySelector('input[type="tel"]').value;
+                
+                const subject = `Course Enrollment: ${name}`;
+                const body = `Name: ${name}%0D%0AEmail: ${email}%0D%0APhone: ${phone}%0D%0A%0D%0APlease process my enrollment.`;
+                
+                window.location.href = `mailto:vivekkoleti@gmail.com?subject=${subject}&body=${body}`;
+                
+                // Show success feedback
+                alert('Spot reserved! Opening your email client to finalize request...');
+                e.target.reset();
+            }
+        }
+
+        // Initialize UI
+        updateSpotsUI();
+
+        // --- MOBILE MENU ---
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        }
+
+        // --- PRIVACY POLICY MODAL ---
+        function openPrivacyPolicy() {
+            document.getElementById('privacyModal').classList.remove('hidden');
+        }
+
+        function closePrivacyPolicy() {
+            document.getElementById('privacyModal').classList.add('hidden');
+        }
+        
+        // Close modal on outside click
+        window.onclick = function(event) {
+            const modal = document.getElementById('privacyModal');
+            if (event.target == modal) {
+                closePrivacyPolicy();
+            }
+        }
+    </script>
 </body>
 </html>
